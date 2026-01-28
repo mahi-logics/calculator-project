@@ -104,13 +104,64 @@ function numericButton(btn) {
             num2.innerHTML = '0';
             break;
         case '*':
-            operator.innerHTML = '*';
+            operator.innerHTML = '×';
             num2.innerHTML = '0';
             break;
         case '/':
-            operator.innerHTML = '/';
+            operator.innerHTML = '÷';
             num2.innerHTML = '0';
             break;
         
     }
+}
+
+
+function result() {
+    const num1 = document.querySelector('.js-num1').innerHTML;
+    const num2 = document.querySelector('.js-num2').innerHTML;
+    const stringOperator = document.querySelector('.js-operator').innerHTML;
+    const result = document.querySelector('.js-result');
+    
+    console.log(stringOperator);
+
+    switch (stringOperator) {
+        case '+':
+            result.innerHTML = Number(num1) + Number(num2);
+            break;
+        case '-':
+            result.innerHTML = Number(num1) - Number(num2);
+            break;
+        case '×':
+            result.innerHTML = Number(num1) * Number(num2);
+            break;
+        case '÷':
+            result.innerHTML = Number(num1) /Number(num2);
+            break;
+    }
+}
+
+
+function del() {
+    const num1 = document.querySelector('.js-num1').innerHTML;
+    const num2 = document.querySelector('.js-num2').innerHTML;
+    const stringOperator = document.querySelector('.js-operator').innerHTML;
+
+    if (stringOperator != '') {
+        document.querySelector('.js-num2').innerHTML = num2.slice(0, -1);
+    } else {
+        document.querySelector('.js-num1').innerHTML = num1.slice(0, -1);
+    }
+
+    if (document.querySelector('.js-num1').innerHTML.length === 0 ) {
+        document.querySelector('.js-num1').innerHTML = '0';
+    }
+
+}
+
+
+function reset() {
+    document.querySelector('.js-num1').innerHTML = '0';
+    document.querySelector('.js-num2').innerHTML = '';
+    document.querySelector('.js-operator').innerHTML = '';
+    document.querySelector('.js-result').innerHTML = '0';
 }
