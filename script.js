@@ -1,0 +1,116 @@
+function numericButton(btn) {
+    let num1 = document.querySelector('.js-num1');
+    let num2 = document.querySelector('.js-num2');
+    let operator = document.querySelector('.js-operator');
+
+    if (num1.innerHTML[0] === '0') {
+        num1.innerHTML = '';
+    }
+    if (num2.innerHTML[0] === '0') {
+        num2.innerHTML = '';
+    }
+
+
+    if (operator.innerHTML != '') {
+        
+        switch (btn) {
+            case 0:
+                if (num2.innerHTML.length === 1 && num2.innerHTML[0] === '0') {
+                    
+                } else {
+                    num2.innerHTML =  num2.innerHTML + '0';
+                }
+                break;
+            case 1:
+                num2.innerHTML =  num2.innerHTML + '1';
+                break;
+            case 2:
+                num2.innerHTML =  num2.innerHTML + '2';
+                break;
+            case 3:
+                num2.innerHTML =  num2.innerHTML + '3';
+                break;
+            case 4:
+                num2.innerHTML =  num2.innerHTML + '4';
+                break;
+            case 5:
+                num2.innerHTML =  num2.innerHTML + '5';
+                break;
+            case 6:
+                num2.innerHTML =  num2.innerHTML + '6';
+                break;
+            
+            case 7:
+                num2.innerHTML =  num2.innerHTML + '7';
+                break;
+            
+            case 8:
+                num2.innerHTML =  num2.innerHTML + '8';
+                break;
+            
+            case 9:
+                num2.innerHTML =  num2.innerHTML + '9';
+                break;
+        } 
+    } else {
+        switch (btn) {
+            case 0:
+                if (num1.innerHTML.length === 1 && num1.innerHTML[0] === '0') {
+                    
+                } else {
+                    num1.innerHTML =  num1.innerHTML + '0';
+                }
+                break;
+            case 1:
+                num1.innerHTML =  num1.innerHTML + '1';
+                break;
+            case 2:
+                num1.innerHTML =  num1.innerHTML + '2';
+                break;
+            case 3:
+                num1.innerHTML =  num1.innerHTML + '3';
+                break;
+            case 4:
+                num1.innerHTML =  num1.innerHTML + '4';
+                break;
+            case 5:
+                num1.innerHTML =  num1.innerHTML + '5';
+                break;
+            case 6:
+                num1.innerHTML =  num1.innerHTML + '6';
+                break;
+            
+            case 7:
+                num1.innerHTML =  num1.innerHTML + '7';
+                break;
+            
+            case 8:
+                num1.innerHTML =  num1.innerHTML + '8';
+                break;
+            
+            case 9:
+                num1.innerHTML =  num1.innerHTML + '9';
+                break;
+        }
+    }
+
+    switch (btn) {
+        case '+':
+            operator.innerHTML = '+';
+            num2.innerHTML = '0';
+            break;
+        case '-':
+            operator.innerHTML = '-';
+            num2.innerHTML = '0';
+            break;
+        case '*':
+            operator.innerHTML = '*';
+            num2.innerHTML = '0';
+            break;
+        case '/':
+            operator.innerHTML = '/';
+            num2.innerHTML = '0';
+            break;
+        
+    }
+}

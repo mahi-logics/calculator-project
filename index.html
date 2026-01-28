@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <p class="js-display">
+        <span class="js-num1">0</span> 
+        <span class="js-operator"></span>
+        <span class="js-num2"></span>
+    </p>
+    <p class="js-result">0</p>
+
+    <!-- Numeric Button -->
+    <button onclick="numericButton(0);">0</button>
+    <button onclick="numericButton(1)">1</button>
+    <button onclick="numericButton(2)">2</button>
+    <button onclick="numericButton(3)">3</button>
+    <button onclick="numericButton(4)">4</button>
+    <button onclick="numericButton(5)">5</button>
+    <button onclick="numericButton(6)">6</button>
+    <button onclick="numericButton(7)">7</button>
+    <button onclick="numericButton(8)">8</button>
+    <button onclick="numericButton(9)">9</button>
+
+    <!-- Operation Button -->
+    <button onclick="numericButton('+')">+</button> 
+    <button onclick="numericButton('-')">-</button> 
+    <button onclick="numericButton('*')">×</button> 
+    <button onclick="numericButton('/')">÷</button> 
+
+
+    <!-- Result Buttton -->
+    <button class="js-submit">=</button>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
