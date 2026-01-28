@@ -4,43 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <p class="js-display">
-        <span class="js-num1">0</span> 
-        <span class="js-operator"></span>
-        <span class="js-num2"></span>
-    </p>
-    <p class="js-result">0</p>
+    <div class="display">
+        <p class="js-display">
+            <span class="js-num1">0</span>
+            <span class="js-operator"></span>
+            <span class="js-num2"></span>
+        </p>
+        <p class="js-result">0</p>
+    </div>
 
-    <!-- Numeric Button -->
-    <button onclick="numericButton(0);">0</button>
-    <button onclick="numericButton(1)">1</button>
-    <button onclick="numericButton(2)">2</button>
-    <button onclick="numericButton(3)">3</button>
-    <button onclick="numericButton(4)">4</button>
-    <button onclick="numericButton(5)">5</button>
-    <button onclick="numericButton(6)">6</button>
-    <button onclick="numericButton(7)">7</button>
-    <button onclick="numericButton(8)">8</button>
-    <button onclick="numericButton(9)">9</button>
+    <div class="container">
+        <!-- Numeric Button -->
+        <div class="numaric">
 
-    <!-- Operation Button -->
-    <button onclick="numericButton('+')">+</button> 
-    <button onclick="numericButton('-')">-</button> 
-    <button onclick="numericButton('*')">×</button> 
-    <button onclick="numericButton('/')">÷</button> 
+            <button></button>
+
+            <!-- Reset Button  -->
+            <button onclick="reset()">Reset</button>
+            
+            <!-- delete button -->
+            <button onclick="del()">Del</button>
 
 
-    <!-- Result Buttton -->
-    <button onclick="result()">=</button>
+            <button onclick="numericButton(0);">0</button>
+            <button onclick="numericButton(1)">1</button>
+            <button onclick="numericButton(2)">2</button>
+            <button onclick="numericButton(3)">3</button>
+            <button onclick="numericButton(4)">4</button>
+            <button onclick="numericButton(5)">5</button>
+            <button onclick="numericButton(6)">6</button>
+            <button onclick="numericButton(7)">7</button>
+            <button onclick="numericButton(8)">8</button>
+            <button onclick="numericButton(9)">9</button>
+            <button onclick="numericButton('.')">.</button>
+        
+            <!-- Result Buttton -->
+            <button onclick="result()">=</button>
+        </div>
+        
+        <!-- Operation Button -->
+        <div class="operators">
+            <button onclick="numericButton('+')" class="orange-btn">+</button>
+            <button onclick="numericButton('-')" class="orange-btn">-</button>
+            <button onclick="numericButton('*')" class="orange-btn">×</button>
+            <button onclick="numericButton('/')" class="orange-btn">÷</button>
+        </div>
+    </div>
 
-    <!-- delete button -->
-    <button onclick="del()">Del</button>
-
-    <!-- Reset Button  -->
-     <button onclick="reset()">Reset</button>
     
 
     <script src="script.js"></script>

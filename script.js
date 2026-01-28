@@ -51,6 +51,9 @@ function numericButton(btn) {
             case 9:
                 num2.innerHTML =  num2.innerHTML + '9';
                 break;
+            case '.':
+                num2.innerHTML =  num2.innerHTML + '.';
+                break;
         } 
     } else {
         switch (btn) {
@@ -90,6 +93,9 @@ function numericButton(btn) {
             
             case 9:
                 num1.innerHTML =  num1.innerHTML + '9';
+                break;
+            case '.':
+                num1.innerHTML =  num1.innerHTML + '.';
                 break;
         }
     }
