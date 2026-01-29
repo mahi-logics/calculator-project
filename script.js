@@ -6,13 +6,25 @@ function numericButton(btn) {
     if (num1.innerHTML[0] === '0') {
         num1.innerHTML = '';
     }
+
     if (num2.innerHTML[0] === '0') {
         num2.innerHTML = '';
     }
 
+    if (btn === '+' || btn === '-' || btn === '*' || btn === '/') {
+        num2.innerHTML = '';
+        if (num1.innerHTML.length === 0) {
+            num1.innerHTML = '0';
+        };
+    }
+
 
     if (operator.innerHTML != '') {
-        
+
+        if (num1.innerHTML.length === 0) {
+            num1.innerHTML = '0';
+            }
+
         switch (btn) {
             case 0:
                 if (num2.innerHTML.length === 1 && num2.innerHTML[0] === '0') {
@@ -56,7 +68,9 @@ function numericButton(btn) {
                 break;
         } 
     } else {
+        
         switch (btn) {
+
             case 0:
                 if (num1.innerHTML.length === 1 && num1.innerHTML[0] === '0') {
                     
@@ -103,21 +117,16 @@ function numericButton(btn) {
     switch (btn) {
         case '+':
             operator.innerHTML = '+';
-            num2.innerHTML = '0';
             break;
         case '-':
             operator.innerHTML = '-';
-            num2.innerHTML = '0';
             break;
         case '*':
             operator.innerHTML = '×';
-            num2.innerHTML = '0';
             break;
         case '/':
             operator.innerHTML = '÷';
-            num2.innerHTML = '0';
             break;
-        
     }
 }
 
@@ -127,8 +136,11 @@ function result() {
     const num2 = document.querySelector('.js-num2').innerHTML;
     const stringOperator = document.querySelector('.js-operator').innerHTML;
     const result = document.querySelector('.js-result');
+
     
-    console.log(stringOperator);
+    if (num2.length === 0) {
+        document.querySelector('.js-num2').innerHTML = '0';
+    }
 
     switch (stringOperator) {
         case '+':
@@ -151,10 +163,12 @@ function del() {
     const num1 = document.querySelector('.js-num1').innerHTML;
     const num2 = document.querySelector('.js-num2').innerHTML;
     const stringOperator = document.querySelector('.js-operator').innerHTML;
-
-    if (stringOperator != '') {
+    
+    if (stringOperator != '' && num2.length === 0) {
+        document.querySelector('.js-operator').innerHTML = '';
+    } else if (stringOperator != '') {
         document.querySelector('.js-num2').innerHTML = num2.slice(0, -1);
-    } else {
+    }else {
         document.querySelector('.js-num1').innerHTML = num1.slice(0, -1);
     }
 
